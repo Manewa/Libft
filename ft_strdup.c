@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 17:12:42 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/07 12:27:38 by namalier         ###   ########.fr       */
+/*   Created: 2023/11/07 12:57:02 by namalier          #+#    #+#             */
+/*   Updated: 2023/11/07 13:07:07 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t i;
-
-	i = 0;
-	while (((char *)s1)[i] == ((char *)s2)[i] && i < n && ((char *)s1)[i])
-		i++;
-	return (((char *)s1)[i] - ((char *)s2)[i]);
+	
 }
