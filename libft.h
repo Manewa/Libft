@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:28:34 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/07 15:34:12 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:40:12 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		ft_toupper(int i);
 int		ft_tolower(int c);
 
 //Functions from file : ft_strrchr.c
-int		ft_strlen(const char *str);
+size_t		ft_strlen(const char *str);
 
 char	*ft_strrchr(const char *s, int c);
 
