@@ -6,7 +6,7 @@
 #    By: tschecro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 01:57:46 by tschecro          #+#    #+#              #
-#    Updated: 2023/11/07 18:09:50 by namalier         ###   ########.fr        #
+#    Updated: 2023/11/07 19:32:42 by namalier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRC		=	ft_atoi.c ft_bzero.c ft_isascii.c ft_isalnum.c ft_isalpha.c \
@@ -14,6 +14,7 @@ SRC		=	ft_atoi.c ft_bzero.c ft_isascii.c ft_isalnum.c ft_isalpha.c \
             ft_tolower.c	ft_toupper.c	ft_strchr.c	ft_isprint.c \
            	ft_strrchr.c	ft_strnstr.c	ft_strlcat.c ft_strlcpy.c \
             ft_strlen.c ft_strncmp.c	ft_memcmp.c	ft_memcpy.c ft_memchr.c\
+			ft_strdup.c
 
 SRC_BONUS 	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
             		ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c \
