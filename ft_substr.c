@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 20:01:50 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/08 20:06:13 by namalier         ###   ########.fr       */
+/*   Created: 2023/11/08 18:46:02 by namalier          #+#    #+#             */
+/*   Updated: 2023/11/08 19:48:31 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdint.h>
+//#include "libft.h"
 
-void	*ft_calloc(size_t nmb, size_t size)
+#include <stdio.h>
+#include<stdlib.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*str;
+	size_t	i;
+	char	*str;
+	unsigned int	st;
 
-	if (size > 0 && nmb > SIZE_MAX / size)
-		return (NULL);
-	str = malloc(nmb * size);
+	i = 0;
+	st = start;
+	str = malloc(len * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_bzero(str, nmb * size);
+	while (s[st] && i < len)
+	{
+		str[i] = s[st];
+		i++;
+		st++;
+	}
 	return (str);
+}
+
+int main()
+{
+	char const *s = "abcpouet";
+	unsigned int i = 12;
+	size_t l = 4;
+
+	printf("%s\n", ft_substr(s, i, l));
+	return (0);
 }

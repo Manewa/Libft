@@ -6,19 +6,11 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:54:33 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/07 15:42:51 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:19:17 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return(i);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

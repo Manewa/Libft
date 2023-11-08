@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:28:34 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/07 15:40:12 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:32:39 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,8 @@ void	ft_bzero(void *s, size_t n);
 
 //Functions from file : ft_atoi.c
 int		ft_atoi(const char *str);
+
+void	*ft_calloc(size_t nmb, size_t size);
+
 
 #endif
