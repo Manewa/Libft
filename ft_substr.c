@@ -6,41 +6,32 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:46:02 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/08 19:48:31 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:39:54 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-#include <stdio.h>
-#include<stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;
-	unsigned int	st;
 
 	i = 0;
-	st = start;
-	str = malloc(len * sizeof(char));
+	str = malloc((len + 1) * sizeof(char));
+	if (ft_strlen(s) <= start)
+	{
+		str[i] = '\0';
+		return (str);
+	}
 	if (!str)
 		return (NULL);
-	while (s[st] && i < len)
+	while (s[start] && i < len)
 	{
-		str[i] = s[st];
+		str[i] = s[start];
 		i++;
-		st++;
+		start++;
 	}
+	str[i] = '\0';
 	return (str);
-}
-
-int main()
-{
-	char const *s = "abcpouet";
-	unsigned int i = 12;
-	size_t l = 4;
-
-	printf("%s\n", ft_substr(s, i, l));
-	return (0);
 }
