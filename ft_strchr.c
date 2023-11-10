@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:53:36 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/07 17:24:00 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:29:55 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
+	char *tmps;
 
 	i = 0;
+	tmps = (char *)s;
+	if ((char)c == 0)
+		return (tmps + ft_strlen(s));
 	if (!s[i])
 		return (0);
 	while (s[i] && s[i] != (char)c)
