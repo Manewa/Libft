@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:53:36 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/10 16:29:55 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:19:08 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	char *tmps;
+	int		i;
+	char	*tmps;
 
 	i = 0;
 	tmps = (char *)s;

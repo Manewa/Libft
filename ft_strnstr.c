@@ -6,21 +6,21 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:54:26 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/09 16:37:19 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:25:06 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char *ft_strnstr(const char *str, const char *tofind, size_t n)
+char	*ft_strnstr(const char *str, const char *tofind, size_t n)
 {
-	size_t i;
-	size_t j;
-	i = 0;
+	size_t	i;
+	size_t	j;
 
+	i = 0;
 	if (!tofind[i])
-			return ((char *)str);
-	while(i < n && str[i])
+		return ((char *) str);
+	while (i < n && str[i])
 	{
 		if (str[i] == tofind[0])
 		{

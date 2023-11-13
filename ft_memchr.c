@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:27:49 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/09 14:33:30 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:13:38 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*tmp;
 	unsigned char	search;
 

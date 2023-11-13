@@ -6,18 +6,18 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:11:19 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/10 15:15:07 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:27:53 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdint.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdint.h>
 
 //Functions from file : ft_tolower.c
 int		ft_tolower(int c);
@@ -103,5 +103,13 @@ void	ft_bzero(void *s, size_t n);
 
 //Functions from file : ft_toupper.c
 int		ft_toupper(int i);
+
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif

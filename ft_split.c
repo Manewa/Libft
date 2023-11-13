@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:51:09 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/10 20:13:50 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:18:43 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	str = malloc((ft_count_word(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (NULL);
@@ -78,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		j++;
 	}
 	str[j] = NULL;
-	return(str);
+	return (str);
 }
 
 /*#include<stdio.h>
