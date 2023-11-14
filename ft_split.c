@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:51:09 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/13 20:18:43 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:39:54 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,22 +82,3 @@ char	**ft_split(char const *s, char c)
 	str[j] = NULL;
 	return (str);
 }
-
-/*#include<stdio.h>
-
-int main()
-{
-	size_t j = 0;
-	char **strr;
-	char const str[] = "        Coucou tu es nul      ! md r";
-	char c = ' ';
-
-	strr = ft_split(str, c);
-	while (str[j])
-	{
-		printf("|%s|\n", strr[j]);
-		j++;
-	}
-	return (0);
-}
-*/
