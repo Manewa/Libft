@@ -6,13 +6,13 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:33:56 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/13 20:08:40 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:43:45 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_end(char const *s1, char const *set, size_t i)
+static int	ft_check_end(char const *s1, char const *set, size_t i)
 {
 	size_t	j;
 
@@ -26,7 +26,7 @@ int	ft_check_end(char const *s1, char const *set, size_t i)
 	return (1);
 }
 
-int	ft_check_start(char const *s1, char const *set, size_t i)
+static int	ft_check_start(char const *s1, char const *set, size_t i)
 {
 	size_t	j;
 

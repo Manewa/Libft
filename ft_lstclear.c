@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 15:41:54 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/16 16:23:24 by namalier         ###   ########.fr       */
+/*   Created: 2023/11/16 12:42:59 by namalier          #+#    #+#             */
+/*   Updated: 2023/11/16 13:20:54 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
-	if (!new)
+	if (!del)
 		return ;
-	if (!*lst)
+	while (*lst)
 	{
-		*lst = new;
-		return ;
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free (*lst);
+		(*lst)=tmp;
 	}
-	tmp = *lst;
-	ft_lstlast(tmp)->next = new;
+	return ;
 }
