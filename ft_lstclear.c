@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:42:59 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/16 13:20:54 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:59:10 by natgomali        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!del)
+	if (!del || !lst)
 		return ;
 	while (*lst)
 	{

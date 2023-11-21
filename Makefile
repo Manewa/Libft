@@ -1,4 +1,16 @@
-SRCS		=  ft_atoi.c ft_isascii.c ft_memchr.c ft_strchr.c ft_strlen.c ft_bzero.c ft_isdigit.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_isprint.c ft_memcpy.c ft_strncmp.c ft_tolower.c ft_isalnum.c ft_memmove.c ft_strlcat.c ft_strnstr.c ft_toupper.c ft_isalpha.c ft_memset.c ft_strlcpy.c ft_strrchr.c ft_strjoin.c ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: namalier  <marvin@42.fr>                   +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/21 19:37:32 by namalier          #+#    #+#              #
+#    Updated: 2023/11/21 19:38:28 by natgomali        ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+RCS		=  ft_atoi.c ft_isascii.c ft_memchr.c ft_strchr.c ft_strlen.c ft_bzero.c ft_isdigit.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_isprint.c ft_memcpy.c ft_strncmp.c ft_tolower.c ft_isalnum.c ft_memmove.c ft_strlcat.c ft_strnstr.c ft_toupper.c ft_isalpha.c ft_memset.c ft_strlcpy.c ft_strrchr.c ft_strjoin.c ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 SRCS_BONUS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c	ft_lstiter.c ft_lstmap.c
 
@@ -12,18 +24,15 @@ CFLAGS		= -Wall -Werror -Wextra
 
 .c.o		:
 			cc ${CFLAGS} -c $< -o ${<:.c=.o}
-so:
-	cc -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
-${NAME}		:    ${OBJS}
-			ar rc ${NAME} ${OBJS}
+${NAME}		:    ${OBJS} ${OBJS_BONUS}
+			ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
 			ranlib ${NAME}
 
 all			:		${NAME}
 
 clean		:
-			rm -f ${OBJS}
+			rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean		:		clean
 			rm -f ${NAME}

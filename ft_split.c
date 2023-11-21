@@ -6,13 +6,13 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:51:09 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/14 17:39:54 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:53:12 by natgomali        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_word(char const *s, char c)
+static int	ft_count_word(char const *s, char c)
 {
 	int		count_word;
 	size_t	i;
@@ -33,7 +33,7 @@ int	ft_count_word(char const *s, char c)
 	return (count_word);
 }
 
-char	*ft_cpy_str(char *str, char const *s, size_t *i, char c)
+static char	*ft_cpy_str(char *str, char const *s, size_t *i, char c)
 {
 	size_t	j;
 	size_t	ib;

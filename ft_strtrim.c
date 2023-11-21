@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:33:56 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/16 16:43:45 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/21 19:19:06 by natgomali        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,23 @@ static int	ft_check_start(char const *s1, char const *set, size_t i)
 	return (0);
 }
 
+static int	ft_count(char const *s1, char const *set, size_t i)
+{
+	if (i == 0)
+	{
+		while (s1[i] && ft_check_start(s1, set, i) == 1)
+			i++;
+		return (i);
+	}
+	else
+	{
+		while ((int)i >= 0 && ft_check_end(s1, set, i) == 0)
+			i--;
+		return (i);
+	}
+	return (0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -47,13 +64,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
-	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (s1[start] && ft_check_start(s1, set, start) == 1)
-		start++;
-	while (end >= 0 && ft_check_end(s1, set, end) == 0)
-		end--;
+	start = ft_count(s1, set, 0);
+	end = ft_count(s1, set, end);
 	if (ft_check_end(s1, set, end) == 0 || s1[start] == '\0')
 	{
 		str = malloc(sizeof(char));

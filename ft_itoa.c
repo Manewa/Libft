@@ -6,13 +6,13 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:41:18 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/13 20:13:09 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:52:18 by natgomali        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_num(int n)
+static size_t	ft_count_num(int n)
 {
 	size_t	i;
 
@@ -27,7 +27,7 @@ size_t	ft_count_num(int n)
 	return (i);
 }
 
-void	ft_add_num(char *res, size_t i, int n)
+static void	ft_add_num(char *res, size_t i, int n)
 {
 	res[--i] = '\0';
 	while (i > 0)
