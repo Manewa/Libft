@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:51:09 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/21 18:53:12 by natgomali        ###   ########.fr       */
+/*   Updated: 2023/11/22 11:52:34 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,21 @@ static char	*ft_cpy_str(char *str, char const *s, size_t *i, char c)
 	return (str);
 }
 
+static void	*ft_free(char **str, char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = ft_count_word(s, c);
+	while (i <= count)
+	{
+		free(str[i]);
+		i++;
+	}
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -74,7 +89,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		str[j] = ft_cpy_str(str[j], s, &i, c);
 		if (!str[j])
-			return (NULL);
+			return (ft_free(str, s, c));
 		while (s[i] == c)
 			i++;
 		j++;

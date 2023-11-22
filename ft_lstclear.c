@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:42:59 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/21 18:59:10 by natgomali        ###   ########.fr       */
+/*   Updated: 2023/11/22 11:25:03 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		tmp = (*lst)->next;
 		del((*lst)->content);
 		free (*lst);
-		(*lst)=tmp;
+		(*lst) = tmp;
 	}
 	return ;
 }

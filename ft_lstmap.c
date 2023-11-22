@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:32:50 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/21 18:55:45 by natgomali        ###   ########.fr       */
+/*   Updated: 2023/11/22 11:23:10 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*begin;
 
 	if (!lst || !f || !del)
-			return (NULL);
+		return (NULL);
 	begin = ft_lstnew(f(lst->content));
 	new = begin;
 	while (lst && lst->next)

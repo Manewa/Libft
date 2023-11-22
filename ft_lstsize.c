@@ -6,7 +6,7 @@
 /*   By: namalier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:26:47 by namalier          #+#    #+#             */
-/*   Updated: 2023/11/14 15:34:22 by namalier         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:23:51 by namalier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int n;
+	int	n;
 
 	n = 0;
 	while (lst != NULL)
